@@ -4,6 +4,6 @@ O problema da mochila (em inglês, Knapsack problem) é um problema de optimiza�
 ## Como rodar?
 Para rodar no Ubuntu, é necessário rodar apenas um comando:
 ```
-java Knapsack.java
+java Knapsack
 ```
 E pronto! Caso queira fazer alguma alteração nos valores, pode acessar no código e faze-los manualmente.
