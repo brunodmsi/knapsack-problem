@@ -8,7 +8,7 @@ export default function Header() {
       <Content>
         <nav>
           <h1>
-            Knapsack Problem
+            Problema da Mochila
           </h1>
         </nav>
 

@@ -40,8 +40,10 @@ public class Knapsack {
     for (int i = 1; i <= NB_ITEMS; i++) {
       // iteramos por cada capacidade
       for (int j = 0; j <= capacity; j++) {
-        if (items[i - 1].weight > j)
+        if (items[i - 1].weight > j) {
           matrix[i][j] = matrix[i-1][j];
+          System.out.println(matrix[i][j]);
+        }
         else
           // maximizamos o valor neste rank na matriz
           matrix[i][j] = Math.max(matrix[i-1][j], matrix[i-1][j - items[i-1].weight] 
@@ -51,7 +53,12 @@ public class Knapsack {
 
     int res = matrix[NB_ITEMS][capacity];
     int w = capacity;
+    System.out.println(res);
+    System.out.println(w);
+
     List<Item> itemsSolution = new ArrayList<>();
+
+    System.out.println(res +" "+ w);
 
     for (int i = NB_ITEMS; i > 0  &&  res > 0; i--) {
       if (res != matrix[i-1][w]) {
