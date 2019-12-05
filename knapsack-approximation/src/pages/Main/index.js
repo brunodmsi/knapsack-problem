@@ -24,16 +24,11 @@ export default function Main() {
     const solution = knapsack.solve(number, capacity, epsilon);
     setResult(solution)
     setIsSolution(true);
-    console.log(solution)
   }
 
   return (
     <Container>
-      <Form onSubmit={handleSubmit} initialData={{
-        number: 6,
-        capacity: 10,
-        epsilon: 3
-      }}>
+      <Form onSubmit={handleSubmit}>
         <h1>Algoritmo de Aproximação</h1>
 
         <span>n => numero de itens</span>
