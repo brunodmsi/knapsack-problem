@@ -86,16 +86,16 @@ class Approximation {
 
     const debugRoundingValue = valueApprox.map(value => ` ${value} `).join('|')
 
-    const startTime = new Date().getMilliseconds();
+    const startTime = new Date().getTime();
     const isPickedApprox = ak.getKnapsackSolution(weight, value, capacity, totalValue);
-    const endtime = new Date().getMilliseconds();
+    const endTime = new Date().getTime();
 
     totalValue = 0;
     for (let i = 0; i < n; i += 1)
       if (isPickedApprox[i]) totalValue += value[i];
 
     const debugMaxValueApprox = totalValue;
-    const debugTotalTime = `${endtime - startTime}ms`
+    const debugTotalTime = `${endTime - startTime}ms`
 
     return {
       debugWeight,
